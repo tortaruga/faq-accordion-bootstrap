@@ -1,0 +1,107 @@
+:root {
+    --dark: hsl(292, 42%, 14%);
+    --purple: hsl(292, 16%, 49%);
+    --accent:#AD28EB;
+    --bg: hsl(275, 100%, 97%);
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'italic';
+    src: url(./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: var(--bg); 
+    font-family: 'regular'; 
+    color: var(--dark);
+    
+}
+
+main {
+    padding: 1.5rem; 
+    position: relative; 
+    min-height: 100vh;
+    margin-bottom: 5rem;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem; 
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.container-sm.faq-container {
+    position: relative;
+    margin-top: 40%;     
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem; 
+    max-width: 600px;
+    box-shadow: 7px 7px 35px hsl(292, 16%, 49%, .2); 
+}    
+ 
+.accordion-button::after {   
+    display: none;      
+}
+
+.accordion-button { 
+    background-image: url('./assets/images/icon-plus.svg'); 
+    background-repeat: no-repeat; 
+    background-position: 100%;  
+    background-size: 1em; 
+}
+
+.accordion-button:not(.collapsed) { 
+    background-image: url('./assets/images/icon-minus.svg'); 
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    box-shadow: none; 
+}  
+  
+.accordion-button:not(.collapsed), .accordion-button {
+    font-weight: bold;
+}
+ 
+button:hover, .accordion-button:not(.collapsed):hover {
+    color:var(--accent);
+}
+
+.answer {
+    color:var(--purple)
+} 
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: .8rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+@media screen and (min-width: 576px) {
+    .container-sm.faq-container {
+        margin-top: 13%;
+    }
+} 
